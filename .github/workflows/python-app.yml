@@ -36,7 +36,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Testing
       run: |
-        pipenv run python3 tests.py
+        pipenv run python3 test.py
     - uses: Nuitka/Nuitka-Action@v0.4
       with:
         script-name: main.py
