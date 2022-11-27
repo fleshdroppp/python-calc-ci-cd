@@ -27,11 +27,11 @@ jobs:
         with:
           python-version: '3.x' 
           architecture: 'x64'
-
-      # Build python script into a stand-alone exe
-      - uses: Nuitka/Nuitka-Action@main
+      
+      - name: Package Application
+        uses: JackMcKew/pyinstaller-action-windows@main
         with:
-          script-name: main.py
+          path: src
 
       # Uploads artifact
       - name: Upload Artifact
