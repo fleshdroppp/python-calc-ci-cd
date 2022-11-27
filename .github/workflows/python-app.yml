@@ -30,11 +30,10 @@ jobs:
       - name: Package Application
         uses: JackMcKew/pyinstaller-action-windows@main
         with:
-          path: src
+          path: .
 
-      # Uploads artifact
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+
+      - uses: actions/upload-artifact@v2
         with:
-          name: exe
-          path: build/main.exe
+          name: main
+          path: dist/windows
